@@ -7,7 +7,7 @@ import repository.StoreRepository;
 import model.Product;
 
 public class StoreController { 
-	StoreRepository io =new StoreRepository();	
+	StoreRepository io =new StoreRepository();
 	public void readProducts(String f){
 		try {
 			io.readFile(f);
@@ -31,6 +31,9 @@ public class StoreController {
 		catch(IOException e){
 			e.printStackTrace();
 		}
+	}
+	public StoreRepository getStoreRepository(){
+		return io;
 	}
 	public ArrayList<Product> getProductsCategory(String cat){
 		return io.getProductsCategory(cat);
