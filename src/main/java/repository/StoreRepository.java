@@ -58,6 +58,9 @@ public class StoreRepository {
 	}
 
 	private boolean illegal(String name) {
+		if(name.equals("")){
+			return true;
+		}
 		char c;
 		for(int i=0;i<name.length();++i) {
 			c = name.charAt(i);
