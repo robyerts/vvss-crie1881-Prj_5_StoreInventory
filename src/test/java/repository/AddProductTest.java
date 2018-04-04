@@ -90,4 +90,33 @@ public class AddProductTest {
             assert true;
         }
     }
+
+    @Test
+    public void AddNewProductNameMainIfThen() {
+        StoreController c =new StoreController();
+        try{
+            Product p1 = new Product(1, "mango", "aliment",20);
+            c.addProduct(p1);
+            if(!c.getStoreRepository().getAllProducts().contains(p1))
+                assert false;
+        } catch(Exception e) {
+            assert false;
+        }
+    }
+
+    @Test
+    public void AddNewProductNameMainIfElse() {
+        try{
+            StoreController c =new StoreController();
+            Product p1 = new Product(1, "@sds", "aliment",20);
+            c.addProduct(p1);
+            if(c.getStoreRepository().getAllProducts().contains(p1)){
+                assert false;
+            }
+        } catch(Exception e){
+            assert true;
+        }
+    }
+
+
 }
