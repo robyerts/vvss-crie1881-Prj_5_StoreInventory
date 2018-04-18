@@ -10,7 +10,8 @@ public class ProductsCategoryTest {
     public void ListProductsCat1() {
         String cat1 = "aliment";
         StoreController storeController = new StoreController();
-        storeController.readProducts("products.txt");
+        storeController.addProduct(new Product(1,"prod1",cat1,10));
+        storeController.addProduct(new Product(2,"prod2","cat2",20));
         if(storeController.getProductsCategory(cat1).isEmpty()){
             assert false;
         }
@@ -19,7 +20,8 @@ public class ProductsCategoryTest {
     public void ListProductsCat2() {
         String cat1 = "asdasdsdas";
         StoreController storeController = new StoreController();
-        storeController.readProducts("products.txt");
+        storeController.addProduct(new Product(1,"prod1","cat1",10));
+        storeController.addProduct(new Product(2,"prod2","cat2",20));
         if(storeController.getProductsCategory(cat1).isEmpty()){
             assert true;
         }
