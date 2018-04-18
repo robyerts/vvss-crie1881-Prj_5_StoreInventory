@@ -33,3 +33,6 @@
 1  aliment 20
 1  aliment 20
 1 mango aliment 20
+1 prodName prodCat1 10
+1 prodName prodCat1 10
+2 prodName2 prodCat2 20
